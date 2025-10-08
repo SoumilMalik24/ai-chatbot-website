@@ -84,3 +84,22 @@ body{
     @apply bg-background text-foreground;
   }
 }
+
+/* --- Neon Button Style --- */
+.btn-neon {
+  @apply inline-flex items-center justify-center font-semibold text-black rounded-full transition-all duration-300;
+  background: linear-gradient(90deg, var(--neon), #00e67a);
+  position: relative;
+  box-shadow: 0 0 40px rgba(0, 255, 150, 0.35), 0 0 10px rgba(0, 255, 150, 0.25);
+}
+
+.btn-neon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  filter: blur(20px);
+  background: radial-gradient(circle at 50% 50%, rgba(0, 255, 150, 0.45), transparent 40%);
+  z-index: -1;
+}
+
